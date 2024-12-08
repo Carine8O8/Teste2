@@ -1,0 +1,149 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Cabeçalho */
+.header {
+    background-color: #f8b045;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.titulo {
+    color: #000;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 5px 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.search-button {
+    background-color: #e89c3f;
+    border: none;
+    padding: 5px 10px;
+    margin-left: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+}
+
+.search-button:hover {
+    background-color: #d78437;
+}
+
+/* Estrutura principal */
+.container {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+}
+
+/* Barra lateral */
+.sidebar {
+    background-color: #808080;
+    flex: 1;
+    min-width: 200px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.option {
+    background-color: #f8b045;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    color: #000;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+}
+
+.option:hover {
+    background-color: #e89c3f;
+}
+
+/* Conteúdo */
+.content {
+    flex: 3;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.text-section .line {
+    background-color: #f8b045;
+    height: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.image-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.image {
+    background-color: #d9d9d9;
+    width: 30%;
+    aspect-ratio: 16 / 9;
+    background-image: linear-gradient(to top, #78c57a, #add19c, #d9f5ff);
+    border: 1px solid #c0c0c0;
+    border-radius: 10px;
+}
+
+/* Rodapé */
+.footer {
+    background-color: #f8b045;
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #000;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .sidebar {
+        min-width: 150px;
+        font-size: 14px;
+    }
+
+    .image {
+        width: 100%;
+    }
+}
